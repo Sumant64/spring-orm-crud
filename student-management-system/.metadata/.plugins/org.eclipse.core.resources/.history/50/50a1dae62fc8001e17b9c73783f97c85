@@ -1,0 +1,33 @@
+package com.spring.orm;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.spring.orm.dao.StudentDao;
+import com.spring.orm.entities.Student;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+        StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
+        
+//        Student student = new Student(23, "Sumant", "ranchi");
+//        int r = studentDao.insert(student);
+//        System.out.println("done " + r);
+        
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        boolean go = true;
+        while(go) {
+        	
+        }
+    }
+}
